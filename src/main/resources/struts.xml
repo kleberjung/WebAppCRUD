@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="basicstruts2" extends="struts-default">
+    
+    
+    
+  		<action name="/home" >
+            <result>/view/home.jsp</result>
+        </action>
+    
+        <action name="">
+            <result>/view/home.jsp</result>
+        </action>
+        
+
+        
+        
+        <!-- PACIENTES -->
+        <action name="buscarPaciente" class="br.com.teste.kleber.action.pacientes.BuscaPacienteAction" method="execute">
+            <result name="success">/view/paciente/buscaPaciente.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        <action name="novoPaciente" class="br.com.teste.kleber.action.pacientes.PacienteInicialAction" method="execute">
+            <result name="success">/view/paciente/novoPacienteForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+		<action name="registrarPaciente" class="br.com.teste.kleber.action.pacientes.NovoPacienteRegistrarAction" method="execute">
+            <result name="success">/view/paciente/novoPacienteCadastrado.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        <action name="alterarPaciente" class="br.com.teste.kleber.action.pacientes.PacienteInicialAction" method="execute">
+            <result name="success">/view/paciente/alterarPacienteForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+	    <action name="alterarPacienteExibe" class="br.com.teste.kleber.action.pacientes.AlterarPacienteExibir" method="execute">
+            <result name="success">/view/paciente/alteracaoPacienteExibir.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action> 
+        
+        <action name="alterarPacienteEfetiva" class="br.com.teste.kleber.action.pacientes.AlterarPacienteEfetivar" method="execute">
+            <result name="success">/view/paciente/alteracaoPacienteRealizada.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>  
+       
+        <action name="excluirPaciente" class="br.com.teste.kleber.action.pacientes.PacienteInicialAction" method="execute">
+            <result name="success">/view/paciente/excluirPacienteForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+  	    <action name="exlcuirPacienteExibe" class="br.com.teste.kleber.action.pacientes.AlterarPacienteExibir" method="execute">
+            <result name="success">/view/paciente/exclusaoPacienteExibir.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action> 
+        
+        <action name="exlcuirPacienteEfetiva" class="br.com.teste.kleber.action.pacientes.ExcluirPacienteEfetivar" method="execute">
+            <result name="success">/view/paciente/exclusaoPacienteRealizada.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>  
+        
+        
+        
+       <!-- MEDICOS -->
+       <action name="buscarMedico" class="br.com.teste.kleber.action.medicos.BuscaMedicoAction" method="execute">
+            <result name="success">/view/medico/buscaMedico.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        <action name="novoMedico" class="br.com.teste.kleber.action.medicos.MedicoInicialAction" method="execute">
+            <result name="success">/view/medico/novoMedicoForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+		<action name="registrarMedico" class="br.com.teste.kleber.action.medicos.NovoMedicoRegistrarAction" method="execute">
+            <result name="success">/view/medico/novoMedicoCadastrado.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        <action name="alterarMedico" class="br.com.teste.kleber.action.medicos.MedicoInicialAction" method="execute">
+            <result name="success">/view/medico/alterarMedicoForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+	    <action name="alterarMedicoExibe" class="br.com.teste.kleber.action.medicos.AlterarMedicoExibir" method="execute">
+            <result name="success">/view/medico/alteracaoMedicoExibir.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action> 
+        
+        <action name="alterarMedicoEfetiva" class="br.com.teste.kleber.action.medicos.AlterarMedicoEfetivar" method="execute">
+            <result name="success">/view/medico/alteracaoMedicoRealizada.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>  
+       
+        <action name="excluirMedico" class="br.com.teste.kleber.action.medicos.MedicoInicialAction" method="execute">
+            <result name="success">/view/medico/excluirMedicoForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+  	    <action name="exlcuirMedicoExibe" class="br.com.teste.kleber.action.medicos.AlterarMedicoExibir" method="execute">
+            <result name="success">/view/medico/exclusaoMedicoExibir.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action> 
+        
+        <action name="exlcuirMedicoEfetiva" class="br.com.teste.kleber.action.medicos.ExcluirMedicoEfetivar" method="execute">
+            <result name="success">/view/medico/exclusaoMedicoRealizada.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        
+        
+        <!-- EXAMES -->
+        <action name="buscarExame" class="br.com.teste.kleber.action.exames.BuscaExameAction" method="execute">
+            <result name="success">/view/exame/buscaExame.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+
+       <action name="novoExame" class="br.com.teste.kleber.action.exames.ExameInicialAction" method="execute">
+            <result name="success">/view/exame/novoExameForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+
+		<action name="registrarExame" class="br.com.teste.kleber.action.exames.NovoExameRegistrarAction" method="execute">
+            <result name="success">/view/exame/novoExameCadastrado.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+
+		<action name="alterarExame" class="br.com.teste.kleber.action.exames.ExameInicialAction" method="execute">
+            <result name="success">/view/exame/alterarExameForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+	    <action name="alterarExameExibe" class="br.com.teste.kleber.action.exames.AlterarExameExibir" method="execute">
+            <result name="success">/view/exame/alteracaoExameExibir.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        <action name="alterarExameEfetiva" class="br.com.teste.kleber.action.exames.AlterarExameEfetivar" method="execute">
+            <result name="success">/view/exame/alteracaoExameRealizada.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+
+        <action name="excluirExame" class="br.com.teste.kleber.action.exames.ExameInicialAction" method="execute">
+            <result name="success">/view/exame/excluirExameForm.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+  	    <action name="exlcuirExameExibe" class="br.com.teste.kleber.action.exames.AlterarExameExibir" method="execute">
+            <result name="success">/view/exame/exclusaoExameExibir.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action> 
+        
+        <action name="exlcuirExameEfetiva" class="br.com.teste.kleber.action.exames.ExcluirExameEfetivar" method="execute">
+            <result name="success">/view/exame/alteracaoExameRealizada.jsp</result>
+            <result name="error">/view/error.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        
+        
+    </package>
+
+</struts>
